@@ -6,6 +6,9 @@ Immersive Vehicles (MTS/IV) content pack focused on military vehicles, parts, an
 
 </div>
 
+[![Discord](https://img.shields.io/badge/Discord-join-7289DA?logo=discord&logoColor=white)](https://discord.gg/ujQR3wf)
+[![Build Status](https://github.com/TheOddlySeagull/Trin-Military-Pack-V2/actions/workflows/build.yml/badge.svg)](https://github.com/TheOddlySeagull/Trin-Military-Pack-V2/actions/workflows/build.yml)
+
 Version: V2.0.0
 
 ## Overview
