@@ -13,7 +13,7 @@ Version: V2.0.0
 
 ## Overview
 
-This pack contains military-themed vehicles and assets that were updates since the very old discontinues Seagull's Military Pack
+This pack contains military-themed vehicles and assets that were updates since the very old discontinued Seagull's Military Pack
 
 ## Download
 
