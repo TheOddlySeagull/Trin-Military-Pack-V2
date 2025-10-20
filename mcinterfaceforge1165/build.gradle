@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        maven { url = "https://maven.minecraftforge.net" }
+        maven { url = "https://maven.parchmentmc.org" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
+        classpath group: "org.parchmentmc", name: "librarian", version: "1.+"
+    }
+}
+
+apply plugin: "net.minecraftforge.gradle"
+apply plugin: "org.parchmentmc.librarian.forgegradle"
+
+version = "${project.mc_version}-${project.mod_version}"
+group = project.mod_group
+archivesBaseName = project.archive_name
+
+sourceCompatibility = targetCompatibility = "1.8"
+compileJava {
+    options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+}
+
+minecraft {
+    mappings channel: project.mappings_channel, version: "${project.mappings_version}-${project.mc_version}"
+    runs {
+        client {
+            workingDirectory project.file("run")
+            mods { minecrafttransportsimulator { source sourceSets.main } }
+        }
+        server {
+            workingDirectory project.file("runServer")
+            mods { minecrafttransportsimulator { source sourceSets.main } }
+        }
+    }
+}
+
+configurations {
+    embed
+    implementation.extendsFrom(embed)
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${project.mc_version}-${project.forge_version}"
+    embed(project(":mccore"))
+}
+
+jar {
+    from { configurations.embed.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+jar.finalizedBy("reobfJar")
+
+tasks.withType(JavaCompile).configureEach { options.encoding = "UTF-8" }

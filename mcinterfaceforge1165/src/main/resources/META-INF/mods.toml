@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="iv_tmp"
+version="V2.0.0"
+displayName="Immersive Vehicles (MTS/IV) - Trin Military Pack"
+displayURL=""
+logoFile="vingette.png"
+authors="TheOddlySeagull"
+credits=""
+description='''
+Trin Military Pack
+'''
