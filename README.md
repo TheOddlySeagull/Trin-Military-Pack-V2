@@ -1,6 +1,6 @@
 <div align="center">
 
-# Trin Military Pack V2 (id: iv_tmp)
+# Trin Military Pack V2
 
 Immersive Vehicles (MTS/IV) content pack focused on military vehicles, parts, and themed assets.
 
@@ -13,7 +13,7 @@ Version: V2.0.0
 
 ## Overview
 
-This pack contains military-themed vehicles and assets split out from the Vehicle Pack into a dedicated repository. It targets Minecraft 1.12.2 and 1.16.5.
+This pack contains military-themed vehicles and assets that were updates since the very old discontinues Seagull's Military Pack
 
 ## Download
 
